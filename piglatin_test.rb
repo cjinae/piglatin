@@ -14,17 +14,17 @@ class PiglatinTest < Test::Unit::TestCase
   end
 
   def test_nil_value
-  	assert_equal "nil", PiglatinConverter.convert(nil)
+  	assert_equal nil, PiglatinConverter.convert(nil)
   end
 
-  def test_nil_value
-  	assert_equal "<empty string>", PiglatinConverter.convert("")
+  def test_empty_value
+  	assert_equal "", PiglatinConverter.convert("")
   end
 
 
 end
 
-
+#INSTRUCTIONS
 # consonant clutter: 
 	# find vowel, in string, return all letters to the left
 	# move group of consonants to the end of the string
@@ -34,9 +34,7 @@ end
 # if nil return nil
 
 # STEPS
-#1 pig starts with consonant 
-
-#2 find me the first occurance of a vowel,
+#1 find me the first occurance of a vowel,
 		# find the index of that first vowel
 			#  	"freedom".index(/[aeiou]/) = n 
 		# retun to me the letters between 0 and index of first vowel
@@ -46,8 +44,8 @@ end
 		# add consonants to end of string
 			# trim + consonants = piggy
 
-#3 add "ay" to the end of the word
+#2 add "ay" to the end of the word
 	# piggy + "ay"
 
-#4 if string is empty return empty <empty string>
-#5 if nil return ""
+#3 if string is empty return empty <empty string>
+#4 if nil return ""
